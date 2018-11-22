@@ -7,14 +7,16 @@
 //
 
 import UIKit
-
+import WebKit
 class ViewController: UIViewController {
-
+@IBOutlet weak var webkit: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let dl = "https://en.savefrom.net/"
+        webkit.load(URLRequest(url: URL(string: dl)!))
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
